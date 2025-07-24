@@ -1,0 +1,20 @@
+version: "3.1"
+nlu:
+- intent: greeting
+  examples: |
+    - Hello there!
+    - Hi!
+    - Good morning!
+- intent: get_horoscope
+  examples: |
+    - What's[ my horos]{"entity": "time", "value": "today"}cope for today?
+    - Tell me my horoscope for t[omorrow.]{"entity": "time", "value": "tomorrow"}
+    - Can you tell me my horoscope for[ next wee]{"entity": "time", "value": "next week"}k?
+- intent: subscription
+  examples: |
+    - I want to subscribe to your service.
+    - How can I subscribe?
+    - Sign me up for the newsletter.
+- intent: dob_intent
+  examples: |
+    - [19](DD)-[01](MM)

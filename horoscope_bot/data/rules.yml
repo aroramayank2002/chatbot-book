@@ -1,0 +1,69 @@
+version: "3.0"
+rules:
+  - rule: Greet the user
+    steps:
+      - intent: greeting
+      - action: utter_greet
+
+  - rule: Greet with name
+    condition:
+      - slot_was_set:
+          - name
+    steps:
+      - intent: greeting
+      - action: utter_greet
+
+
+  - rule: provide horoscope
+    steps:
+      - intent: get_horoscope  # When the user asks for their horoscope
+      - action: utter_ask_zodiac_sign  # Bot asks for their zodiac sign
+
+  - rule: respond with horoscope
+    steps:
+      - intent: inform_zodiac  # When the user provides their zodiac sign
+      - action: action_get_horoscope  # Custom action that fetches and provides the horoscope
+
+  - rule: Handle date of birth input
+    steps:
+      - intent: dob_intent
+        entities:
+          - DD
+          - MM
+      - slot_was_set:
+        - DD: "19"
+        - MM: "01"
+      - action: utter_dob_confirm  # Bot confirms the received date of birth
+      - action: utter_dob_stored
+
+  - rule: Handle subscription request
+    steps:
+      - intent: subscription
+      - action: utter_subscribe_info
+
+  - rule: handle affirmation
+    steps:
+      - intent: affirm
+      - action: utter_affirm  # Optional response when the user affirms
+
+  - rule: handle denial
+    steps:
+      - intent: deny
+      - action: utter_goodbye  # Optional response when the user denies or says no
+
+  - rule: Activate Pizza Form
+    steps:
+      - intent: buy_pizza
+      - action: pizza_form  # Activates the pizza form
+      - active_loop: pizza_form
+
+  - rule: Submit Pizza Form
+    condition:
+      - active_loop: pizza_form
+    steps:
+      - action: pizza_form
+      - active_loop: null  # Marks the form as submitted and completes the loop
+      - slot_was_set:
+          - requested_slot: null
+      - action: utter_submit
+      - action: utter_pizza_slots

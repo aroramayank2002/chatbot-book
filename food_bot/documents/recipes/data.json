@@ -1,0 +1,596 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "text": "3 tablespoons oil or ghee",
+        "intent": "get_recipe",
+        "entities": [
+          {
+            "start": 0,
+            "end": 13,
+            "value": "3 tablespoons",
+            "entity": "qty"
+          },
+          {
+            "start": 14,
+            "end": 17,
+            "value": "oil",
+            "entity": "medium"
+          },
+          {
+            "start": 21,
+            "end": 25,
+            "value": "ghee",
+            "entity": "medium"
+          }
+        ]
+      },
+      {
+        "text": "½ teaspoon cumin seeds",
+        "intent": "get_recipe",
+        "entities": [
+          {
+            "start": 11,
+            "end": 22,
+            "value": "cumin seeds",
+            "entity": "spice"
+          }
+        ]
+      },
+      {
+        "text": "¼ teaspoon turmeric powder (ground turmeric)",
+        "intent": "get_recipe",
+        "entities": [
+          {
+            "start": 2,
+            "end": 10,
+            "value": "teaspoon",
+            "entity": "qty"
+          },
+          {
+            "start": 11,
+            "end": 19,
+            "value": "turmeric",
+            "entity": "spice"
+          },
+          {
+            "start": 28,
+            "end": 43,
+            "value": "ground turmeric",
+            "entity": "spice"
+          }
+        ]
+      },
+      {
+        "text": "½ teaspoon Kashmiri Chilli Powder or ¼ to ½ teaspoon red chilli powder or cayenne pepper or paprika",
+        "intent": "get_recipe",
+        "entities": [
+          {
+            "start": 11,
+            "end": 34,
+            "value": "Kashmiri Chilli Powder ",
+            "entity": "spice"
+          },
+          {
+            "start": 53,
+            "end": 70,
+            "value": "red chilli powder",
+            "entity": "spice"
+          },
+          {
+            "start": 74,
+            "end": 89,
+            "value": "cayenne pepper ",
+            "entity": "spice"
+          },
+          {
+            "start": 92,
+            "end": 99,
+            "value": "paprika",
+            "entity": "spice"
+          }
+        ]
+      },
+      {
+        "text": "¼ teaspoon Garam Masala or Punjabi garam masala powder",
+        "intent": "get_recipe",
+        "entities": [
+          {
+            "start": 11,
+            "end": 23,
+            "value": "Garam Masala",
+            "entity": "spice"
+          },
+          {
+            "start": 27,
+            "end": 47,
+            "value": "Punjabi garam masala",
+            "entity": "spice"
+          }
+        ]
+      },
+      {
+        "text": "1 tablespoon heavy cream or 1 tablespoon malai (clotted cream) or 2 tablespoons of light cream, optional",
+        "intent": "get_recipe",
+        "entities": [
+          {
+            "start": 2,
+            "end": 12,
+            "value": "tablespoon",
+            "entity": "spice"
+          },
+          {
+            "start": 13,
+            "end": 24,
+            "value": "heavy cream",
+            "entity": "food"
+          },
+          {
+            "start": 41,
+            "end": 46,
+            "value": "malai",
+            "entity": "spice"
+          },
+          {
+            "start": 48,
+            "end": 61,
+            "value": "clotted cream",
+            "entity": "spice"
+          },
+          {
+            "start": 83,
+            "end": 94,
+            "value": "light cream",
+            "entity": "spice"
+          }
+        ]
+      },
+      {
+        "text": "1 cup green peas (matar) – fresh or frozen, 130 grams",
+        "intent": "get_recipe",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "1 cup",
+            "entity": "qty"
+          },
+          {
+            "start": 6,
+            "end": 16,
+            "value": "green peas",
+            "entity": "food"
+          },
+          {
+            "start": 18,
+            "end": 23,
+            "value": "matar",
+            "entity": "food"
+          },
+          {
+            "start": 44,
+            "end": 53,
+            "value": "130 grams",
+            "entity": "qty"
+          }
+        ]
+      },
+      {
+        "text": "1 to 1.25 cups water for stove-top pressure cooker and 1 cup water for Instant Pot",
+        "intent": "get_recipe",
+        "entities": [
+          {
+            "start": 0,
+            "end": 14,
+            "value": "1 to 1.25 cups",
+            "entity": "qty"
+          },
+          {
+            "start": 15,
+            "end": 20,
+            "value": "water",
+            "entity": "qty"
+          }
+        ]
+      },
+      {
+        "text": "salt as required",
+        "intent": "get_recipe",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "salt",
+            "entity": "spice"
+          }
+        ]
+      },
+      {
+        "text": "½ teaspoon sugar or add as required – optional *check notes",
+        "intent": "get_recipe",
+        "entities": [
+          {
+            "start": 11,
+            "end": 16,
+            "value": "sugar",
+            "entity": "spice"
+          }
+        ]
+      },
+      {
+        "text": "250 to 300 grams Paneer (Indian cottage cheese)",
+        "intent": "get_recipe",
+        "entities": [
+          {
+            "start": 0,
+            "end": 16,
+            "value": "250 to 300 grams",
+            "entity": "qty"
+          },
+          {
+            "start": 17,
+            "end": 23,
+            "value": "Paneer",
+            "entity": "food"
+          },
+          {
+            "start": 25,
+            "end": 46,
+            "value": "Indian cottage cheese",
+            "entity": "food"
+          }
+        ]
+      },
+      {
+        "text": "½ teaspoon kasuri methi – crushed, (dry fenugreek leaves)",
+        "intent": "get_recipe",
+        "entities": [
+          {
+            "start": 0,
+            "end": 10,
+            "value": "½ teaspoon",
+            "entity": "qty"
+          },
+          {
+            "start": 11,
+            "end": 23,
+            "value": "kasuri methi",
+            "entity": "spice"
+          },
+          {
+            "start": 36,
+            "end": 56,
+            "value": "dry fenugreek leaves",
+            "entity": "spice"
+          }
+        ]
+      },
+      {
+        "text": "1 to 2 tablespoons chopped coriander leaves (cilantro)",
+        "intent": "get_recipe",
+        "entities": [
+          {
+            "start": 0,
+            "end": 18,
+            "value": "1 to 2 tablespoons",
+            "entity": "qty"
+          },
+          {
+            "start": 19,
+            "end": 43,
+            "value": "chopped coriander leaves",
+            "entity": "spice"
+          },
+          {
+            "start": 45,
+            "end": 53,
+            "value": "cilantro",
+            "entity": "spice"
+          }
+        ]
+      },
+      {
+        "text": "¾ to 1 cup chopped tomatoes – 120 grams or 3 medium-sized",
+        "intent": "get_recipe",
+        "entities": [
+          {
+            "start": 0,
+            "end": 10,
+            "value": "¾ to 1 cup",
+            "entity": "qty"
+          },
+          {
+            "start": 11,
+            "end": 27,
+            "value": "chopped tomatoes",
+            "entity": "food"
+          },
+          {
+            "start": 30,
+            "end": 39,
+            "value": "120 grams",
+            "entity": "qty"
+          },
+          {
+            "start": 43,
+            "end": 57,
+            "value": "3 medium-sized",
+            "entity": "qty"
+          }
+        ]
+      },
+      {
+        "text": "½ cup chopped onions – 60 grams or 1 medium-sized",
+        "intent": "get_recipe",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "½ cup",
+            "entity": "qty"
+          },
+          {
+            "start": 6,
+            "end": 20,
+            "value": "chopped onions",
+            "entity": "food"
+          },
+          {
+            "start": 23,
+            "end": 31,
+            "value": "60 grams",
+            "entity": "qty"
+          },
+          {
+            "start": 35,
+            "end": 49,
+            "value": "1 medium-sized",
+            "entity": "qty"
+          }
+        ]
+      },
+      {
+        "text": "1 teaspoon chopped green chilies or serrano peppers or 1 to 2 green chillies",
+        "intent": "get_recipe",
+        "entities": [
+          {
+            "start": 0,
+            "end": 10,
+            "value": "1 teaspoon",
+            "entity": "qty"
+          },
+          {
+            "start": 11,
+            "end": 32,
+            "value": "chopped green chilies",
+            "entity": "spice"
+          },
+          {
+            "start": 36,
+            "end": 51,
+            "value": "serrano peppers",
+            "entity": "spice"
+          },
+          {
+            "start": 55,
+            "end": 61,
+            "value": "1 to 2",
+            "entity": "qty"
+          },
+          {
+            "start": 62,
+            "end": 76,
+            "value": "green chillies",
+            "entity": "spice"
+          }
+        ]
+      },
+      {
+        "text": "1 teaspoon chopped garlic or 3 to 4 medium-sized garlic cloves",
+        "intent": "get_recipe",
+        "entities": [
+          {
+            "start": 0,
+            "end": 10,
+            "value": "1 teaspoon",
+            "entity": "qty"
+          },
+          {
+            "start": 11,
+            "end": 25,
+            "value": "chopped garlic",
+            "entity": "spice"
+          },
+          {
+            "start": 29,
+            "end": 35,
+            "value": "3 to 4",
+            "entity": "qty"
+          },
+          {
+            "start": 36,
+            "end": 48,
+            "value": "medium-sized",
+            "entity": "qty"
+          },
+          {
+            "start": 49,
+            "end": 62,
+            "value": "garlic cloves",
+            "entity": "spice"
+          }
+        ]
+      },
+      {
+        "text": "2 tablespoons chopped coriander leaves",
+        "intent": "get_recipe",
+        "entities": [
+          {
+            "start": 0,
+            "end": 13,
+            "value": "2 tablespoons",
+            "entity": "qty"
+          },
+          {
+            "start": 14,
+            "end": 38,
+            "value": "chopped coriander leaves",
+            "entity": "spice"
+          }
+        ]
+      },
+      {
+        "text": "10 to 12 cashews",
+        "intent": "get_recipe",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "10 to 12",
+            "entity": "qty"
+          },
+          {
+            "start": 9,
+            "end": 16,
+            "value": "cashews",
+            "entity": "food"
+          }
+        ]
+      },
+      {
+        "text": "4 to 5 black peppercorns",
+        "intent": "get_recipe",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "4 to 5",
+            "entity": "qty"
+          },
+          {
+            "start": 7,
+            "end": 24,
+            "value": "black peppercorns",
+            "entity": "spice"
+          }
+        ]
+      },
+      {
+        "text": "2 cloves",
+        "intent": "get_recipe",
+        "entities": []
+      },
+      {
+        "text": "1 inch cinnamon (true cinnamon) or ½ inch cassia cinnamon",
+        "intent": "get_recipe",
+        "entities": [
+          {
+            "start": 7,
+            "end": 15,
+            "value": "cinnamon",
+            "entity": "spice"
+          },
+          {
+            "start": 35,
+            "end": 41,
+            "value": "½ inch",
+            "entity": "qty"
+          },
+          {
+            "start": 42,
+            "end": 57,
+            "value": "cassia cinnamon",
+            "entity": "spice"
+          }
+        ]
+      },
+      {
+        "text": "1 teaspoon coriander seeds",
+        "intent": "get_recipe",
+        "entities": [
+          {
+            "start": 11,
+            "end": 26,
+            "value": "coriander seeds",
+            "entity": "spice"
+          }
+        ]
+      },
+      {
+        "text": "1 teaspoon chopped green chilies or serrano peppers or 1 to 2 green chillies",
+        "intent": "get_recipe",
+        "entities": []
+      },
+      {
+        "text": "1 teaspoon chopped ginger or 1 inch ginger",
+        "intent": "get_recipe",
+        "entities": []
+      },
+      {
+        "text": "1 teaspoon chopped garlic or 3 to 4 medium-sized garlic cloves",
+        "intent": "get_recipe",
+        "entities": []
+      },
+      {
+        "text": "2 tablespoons chopped coriander leaves",
+        "intent": "get_recipe",
+        "entities": []
+      },
+      {
+        "text": "10 to 12 cashews",
+        "intent": "get_recipe",
+        "entities": []
+      },
+      {
+        "text": "4 to 5 black peppercorns",
+        "intent": "get_recipe",
+        "entities": []
+      },
+      {
+        "text": "2 cloves",
+        "intent": "get_recipe",
+        "entities": []
+      },
+      {
+        "text": "1 inch cinnamon (true cinnamon) or ½ inch cassia cinnamon",
+        "intent": "get_recipe",
+        "entities": []
+      },
+      {
+        "text": "1 green cardamom – optional",
+        "intent": "get_recipe",
+        "entities": []
+      },
+      {
+        "text": "1 teaspoon coriander seeds",
+        "intent": "get_recipe",
+        "entities": []
+      },
+      {
+        "text": "Make the masala paste with tomatoes, spices, herbs and cashews as listed above.",
+        "intent": "get_recipe",
+        "entities": []
+      },
+      {
+        "text": "Press the sauté button of your Instant pot and let the display show “hot”. Add oil to the inner steel pot. Crackle the cumin seeds first.",
+        "intent": "get_recipe",
+        "entities": []
+      },
+      {
+        "text": "Add the ground masala paste and sauté stirring often until it thickens and looks glossy. You can press the sauté button twice to bring the setting to less, if in case the pot becomes too hot.",
+        "intent": "get_recipe",
+        "entities": []
+      },
+      {
+        "text": "Add the turmeric powder, red chilli powder and garam masala powder. Mix and sauté for a minute.",
+        "intent": "get_recipe",
+        "entities": []
+      },
+      {
+        "text": "Add the green peas, 1 cup of water, salt and combine thoroughly, deglazing if needed. Press the cancel button.",
+        "intent": "get_recipe",
+        "entities": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "0": "affirm",
+  "1": "buy_pizza",
+  "2": "deny",
+  "3": "dob_intent",
+  "4": "get_horoscope",
+  "5": "greeting",
+  "6": "inform",
+  "7": "inform_zodiac",
+  "8": "subscription"
+}

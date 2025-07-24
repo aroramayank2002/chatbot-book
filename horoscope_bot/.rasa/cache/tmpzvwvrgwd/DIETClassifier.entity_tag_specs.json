@@ -1,0 +1,28 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-time",
+      "2": "I-time",
+      "3": "L-time",
+      "4": "U-time",
+      "5": "B-zodiac_sign",
+      "6": "I-zodiac_sign",
+      "7": "L-zodiac_sign",
+      "8": "U-zodiac_sign",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-time": 1,
+      "I-time": 2,
+      "L-time": 3,
+      "U-time": 4,
+      "B-zodiac_sign": 5,
+      "I-zodiac_sign": 6,
+      "L-zodiac_sign": 7,
+      "U-zodiac_sign": 8,
+      "O": 0
+    },
+    "num_tags": 9
+  }
+]

@@ -1,0 +1,58 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: Ask for a recipe
+  steps:
+    - intent: get_recipe
+      entities:
+        - recipe_name: "aloo gobi"
+    - action: action_fetch_recipe
+
+- story: User asks for a recipe and provides details
+  steps:
+    - intent: get_recipe
+      entities:
+        - recipe_name: "aloo gobi"   # The user specifies a recipe
+    - action: action_fetch_recipe    # The assistant fetches the recipe
+
+- story: interactive_story_1
+  steps:
+  - intent: nlu_fallback
+  - intent: inform
+    entities:
+    - qty: '2'
+    - food: potatoes
+    - qty: 1 teaspoon
+    - spice: cumin
+    - qty: 1/2 tsp
+    - spice: turmeric
+  - action: action_list_entities
+  - action: action_pair_food_spice_with_qty

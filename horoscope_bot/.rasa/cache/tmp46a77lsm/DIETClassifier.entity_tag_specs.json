@@ -1,0 +1,36 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-name",
+      "2": "I-name",
+      "3": "L-name",
+      "4": "U-name",
+      "5": "B-time",
+      "6": "I-time",
+      "7": "L-time",
+      "8": "U-time",
+      "9": "B-zodiac_sign",
+      "10": "I-zodiac_sign",
+      "11": "L-zodiac_sign",
+      "12": "U-zodiac_sign",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-name": 1,
+      "I-name": 2,
+      "L-name": 3,
+      "U-name": 4,
+      "B-time": 5,
+      "I-time": 6,
+      "L-time": 7,
+      "U-time": 8,
+      "B-zodiac_sign": 9,
+      "I-zodiac_sign": 10,
+      "L-zodiac_sign": 11,
+      "U-zodiac_sign": 12,
+      "O": 0
+    },
+    "num_tags": 13
+  }
+]

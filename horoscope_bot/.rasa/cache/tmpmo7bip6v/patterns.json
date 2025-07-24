@@ -1,0 +1,6 @@
+[
+  {
+    "name": "zodiac_sign",
+    "pattern": "(\\bAries\\b|\\bTaurus\\b|\\bGemini\\b|\\bCancer\\b|\\bLeo\\b|\\bVirgo\\b|\\bLibra\\b|\\bScorpio\\b|\\bSagittarius\\b|\\bCapricorn\\b|\\bAquarius\\b|\\bPisces\\b)"
+  }
+]

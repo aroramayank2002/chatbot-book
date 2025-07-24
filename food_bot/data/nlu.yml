@@ -1,0 +1,161 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
+
+  - intent: goodbye
+    examples: |
+      - cu
+      - good by
+      - cee you later
+      - good night
+      - bye
+      - goodbye
+      - have a nice day
+      - see you around
+      - bye bye
+      - see you later
+
+  - intent: affirm
+    examples: |
+      - yes
+      - y
+      - indeed
+      - of course
+      - that sounds good
+      - correct
+
+  - intent: deny
+    examples: |
+      - no
+      - n
+      - never
+      - I don't think so
+      - don't like that
+      - no way
+      - not really
+
+  - intent: mood_great
+    examples: |
+      - perfect
+      - great
+      - amazing
+      - feeling like a king
+      - wonderful
+      - I am feeling very good
+      - I am great
+      - I am amazing
+      - I am going to save the world
+      - super stoked
+      - extremely good
+      - so so perfect
+      - so good
+      - so perfect
+
+  - intent: mood_unhappy
+    examples: |
+      - my day was horrible
+      - I am sad
+      - I don't feel very well
+      - I am disappointed
+      - super sad
+      - I'm so sad
+      - sad
+      - very sad
+      - unhappy
+      - not good
+      - not very good
+      - extremly sad
+      - so saad
+      - so sad
+
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
+
+  - intent: get_recipe
+    examples: |
+      - read [aalu-gobi.txt](recipe_name)
+      - Tell me how to make [aalu gobi](recipe_name).
+      - Give me the steps for [aalu gobi](recipe_name).
+      - Can you share the recipe for [aalu gobi](recipe_name)?
+
+  - intent: inform
+    examples: |
+      - I used [2](qty) [potatoes](food), [1 teaspoon](qty) of [cumin](spice), and [1/2 tsp](qty) of [turmeric](spice).
+      - [2 large](qty) [potatoes](food) [aloo](food), such as Russet, peeled and cut into bite-sized chunks
+      - [1 medium](qty) [cauliflower gobi](food), cut into small florets
+      - [2 tablespoons](qty) vegetable oil
+      - [1 teaspoon](qty) [cumin seeds](spice)
+      - [1 medium](qty) [onion](food) finely chopped
+      - [2](qty) cloves [garlic](spice) minced
+      - [1- inch](qty) piece of [[ginge](spice)r grated](spice)
+      - [1 large](qty) [[tomat](food)o diced](food)
+      - 1 teaspoon [[turmeri](spice)c powder](spice)
+      - [1 teaspoon](qty) [ground [cumi](spice)n](spice)
+      - 1 teaspoon [ground [coriande](spice)r](spice)
+      - [½ teaspoon](qty) [[red [chi](spice)li](spic](spice)e) powder adjust to taste
+      - [Salt](spice) to taste
+      - [½ cup](qty) water
+      - [3 tablespoons](qty) [oil](medium) or [ghee](medium)
+      - ½ teaspoon [cumin seeds](spice)
+      - ¼ [teaspoon](qty) [turmeric](spice) powder ([ground turmeric](spice))
+      - ½ teaspoon [Kashmiri Chilli Powder ](spice)or ¼ to ½ teaspoon [red chilli powder](spice) or [cayenne pepper ](spice)or [paprika](spice)
+      - ¼ teaspoon [Garam Masala](spice) or [Punjabi garam masala](spice) powder
+      - 1 [tablespoon](spice) [heavy cream](food) or 1 tablespoon [malai](spice) ([clotted cream](spice)) or 2 tablespoons of [light cream](spice), optional
+      - [1 cup](qty) [green peas](food) ([matar](food)) – fresh or frozen, [130 grams](qty)
+      - [1 to 1.25 cups](qty) [water](qty) for stove-top pressure cooker and 1 cup water for Instant Pot
+      - [salt](spice) as required
+      - ½ teaspoon [sugar](spice) or add as required – optional *check notes
+      - [250 to 300 grams](qty) [Paneer](food) ([Indian cottage cheese](food))
+      - [½ teaspoon](qty) [kasuri methi](spice) – crushed, ([dry fenugreek leaves](spice))
+      - [1 to 2 tablespoons](qty) [chopped coriander leaves](spice) ([cilantro](spice))
+      - [¾ to 1 cup](qty) [chopped tomatoes](food) – [120 grams](qty) or [3 medium-sized](qty)
+      - [½ cup](qty) [chopped onions](food) – [60 grams](qty) or [1 medium-sized](qty)
+      - [1 teaspoon](qty) [chopped green chilies](spice) or [serrano peppers](spice) or [1 to 2](qty) [green chillies](spice)
+      - [1 teaspoon](qty) [chopped garlic](spice) or [3 to 4](qty) [medium-sized](qty) [garlic cloves](spice)
+      - [2 tablespoons](qty) [chopped coriander leaves](spice)
+      - [10 to 12](qty) [cashews](food)
+      - [4 to 5](qty) [black peppercorns](spice)
+      - 2 cloves
+      - 1 inch [cinnamon](spice) (true cinnamon) or [½ inch](qty) [cassia cinnamon](spice)
+      - 1 teaspoon [coriander seeds](spice)
+
+  - synonym: ginger
+    examples: |
+      - ginger root
+      - adrak
+      - fresh ginger
+  - synonym: cumin
+    examples: |
+      - jeera
+      - zira
+  - synonym: tomato
+    examples: |
+      - tamatar
+      - fresh tomato
+  - synonym: potato
+    examples: |
+      - potatoes
+      - aloo
+  - synonym: cottage cheese
+    examples: |
+      - paneer
+      - cottage cheese

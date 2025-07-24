@@ -1,0 +1,16 @@
+{
+  "lookup": {
+    "eJyLrq6NBQAEOAGx": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrUvJLMkszUYiuFaBcXHQVf31gdhcw8oJISK4WU/KR4CLu2NhYA7IojxQ==": "utter_dob_confirm",
+    "eJyVzUEKgCAQBdCrzAE8gWu3niBCzCYYyDF0bCPdPcP20e5/ePw/tUtBOzKezgehxBraCI59RA1v2akIcre1YO4GWUgIi4bJGAXWzgqIOxENa1rcyNfHeBXB7B4fEm+U4/+D+QZgMkeC": "utter_dob_stored",
+    "eJy1jTEKgDAMRa+SA/QEnV09QZGiNkJAU0lTl9K7W9FdHNzeh8f7rlQDZRc8/DgrRbZQbvA8bmjhGSslRW5uTijNQVZSwmTBdZ2Bvh8MEDdFLYQ4+ZvrSzyrovjLnyMvJNt/B0mjYPjeH07z52ri": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohPbUkPiO/KL84Ob8gtbY2FgDUVx7f": "utter_ask_zodiac_sign",
+    "eJyFjMEJgDAMAFfpAE7QVURCqaEGNSlN6sPi7hb0398dHDe3Z3ItF7wgRCNh79oHwOFE7345SA25t1Wx9Ia4q3mX0GCTIhol4zN4VTMsEHSHW1YKEZTS+Lm8R3g/XA==": "action_listen",
+    "eJyljkEKgDAMBL/SB/iCfkUklBo0qElpoqClf7egdw/edmAYti+1cyVlPCBEI2HvyjOAw4bevbCSGnJzd8XcHOKG5t2EBrNk0SgJ60drN8MMQRe4ZKQQQWn62/z4NyKftQ43NmxYyQ==": "utter_goodbye",
+    "eJyljlEKwjAQBa+SA3iCXEVkickjLupuyW6FGnp3A/VXKvTvDQzDO/f1FPrU8KKUnVVi6NsgSU/E8IUHm0OGOxvacFgGegwVTjdtalknrDut2R2Nkt3prYVTJuN6tLnzr0CW/25V1XJd8Ctx+QDQMXJG": "action_listen",
+    "eJyljkEKwjAQRa8yByii21wlhCHEsQ62mZKZujDk7gasWNy4cPc/PP77vrYB6lLojjEZS3ZQXwFznMnBViZWo9zZVal0hnOv5mAkw6sU0SQLtR9bqxkVjHrDh5w5JlQe/938/qeTmHZoZ3DgT4dj+Ii6hY2pY36HhQHeDzhfpMzby9bCE8kKb8g=": "action_get_horoscope",
+    "eJy1jkEKwjAQRa8yByii21wllCHEsQ62mZKZujD07g1YsbpREHf/w+P/58vcQBkzXTFEY0kOyj1gCgM5WEvPapQqOynlynCq1Rx0ZHiWLBplpPnD1mRGGYNe8CZHDhGVu1833/20F9MKbR4c+MNu3z6P6gsbU8X8BmsbeBhwOkkeVssvDV6t/yPSLmspoxY=": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohvSg1tSQzL722NhYAPq0cww==": "utter_greet",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohvSg1tSQzL72WgDGlJSWpRfFg1fgMiQUAjXY3Ew==": "action_listen"
+  }
+}

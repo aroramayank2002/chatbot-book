@@ -1,0 +1,130 @@
+# Directory of everything that your assistant knows
+version: "3.0"
+intents:
+  - greet
+  - goodbye
+  - greeting
+  - get_horoscope
+  - subscription
+  - inform_zodiac
+  - affirm
+  - deny
+  - pizza_form
+  - buy_pizza
+  - inform
+
+
+#   entities: []
+entities:
+  - zodiac_sign
+  - DD
+  - MM
+  - name
+  - pizza_size
+  - pizza_type
+
+
+slots:
+  zodiac_sign:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: zodiac_sign  # Maps the entity 'zodiac_sign' to this slot
+  DD:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: DD
+
+  MM:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: MM
+
+  name:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: name
+
+
+  pizza_size:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: pizza_size
+
+  pizza_type:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: pizza_type
+
+forms:
+  pizza_form:
+    required_slots:
+      - pizza_size
+      - pizza_type
+
+responses:
+
+  utter_ask_zodiac_sign:
+    - text: "What is your zodiac sign?"
+
+  utter_affirm:
+    - text: "Great! Let me know your zodiac sign, and I'll find your horoscope."
+
+  utter_greet:
+    - text: "Hello! How can I help you?"
+    - text: "Hello, {name}! How can I help you?"
+  utter_greet_2:
+    - text: "Hey ?"
+      buttons:
+        - title: "greet"
+          payload: "/mood_great"
+        - title: "super sad"
+          payload: "/mood_sad"
+  utter_goodbye:
+    - text: "Goodbye! Have a great day!"
+  utter_bye:
+    - text: "Bye!"
+      image: "https://www.flaticon.com/free-icon/html-5_174854"
+  utter_see_you:
+    - text: "Bye!"
+      channel: "slack"
+  utter_iambot:
+    - text: "I am a bot!"
+  utter_subscribe_info:
+    - text: "You can subscribe to our service by visiting our website or contacting support!"
+  utter_dob_confirm:
+    - text: "Got it! I'll keep your date of birth in mind."
+  utter_dob_stored:
+    - text: "Your date of birth has been saved. Thank you!"
+
+  utter_submit:
+    - text: "Thank you! Your order has been submitted successfully."
+  utter_pizza_slots:
+    - text: "You have ordered a {pizza_size} {pizza_type} pizza. Is that correct?"
+  utter_ask_pizza_size:
+    - text: "What size pizza would you like? We have small, medium, and large."
+  utter_ask_pizza_type:
+    - text: "What type of pizza would you like? For example, pepperoni, vegetarian, or cheese."
+
+#   actions: []
+actions:
+  - action_get_horoscope
+  - utter_submit
+  - utter_pizza_slots
+  - validate_simple_pizza_form
+
+session_config:
+  session_expiration_time: 60  # Session expires after 60 minutes
+  carry_over_slots_to_new_session: true  # Retains slot values between sessions
+

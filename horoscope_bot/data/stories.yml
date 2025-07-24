@@ -1,0 +1,37 @@
+version: "3.0"
+
+stories:
+  - story: Greet the user
+    steps:
+      - intent: greeting
+      - action: utter_greet  # Responds to the user's greeting
+
+  - story: Store user's date of birth
+    steps:
+      - intent: dob_intent
+        entities:
+          - DD: "19"
+          - MM: "01"
+      - action: utter_dob_confirm  # Bot acknowledges the received date of birth
+      - slot_was_set:
+          - DD: "19"
+          - MM: "01"  # Example of storing the extracted day and month in their slots
+      - action: utter_dob_stored
+
+  - story: Ask for horoscope and provide based on zodiac sign
+    steps:
+      - intent: get_horoscope  # User asks for their horoscope
+      - action: utter_ask_zodiac_sign  # Bot asks for their zodiac sign
+      - intent: inform_zodiac  # User provides their zodiac sign
+        entities:
+          - zodiac_sign: "<zodiac_sign>"  # Captures the zodiac_sign entity
+      - slot_was_set:
+          - zodiac_sign: "<zodiac_sign>"  # Updates the zodiac_sign slot
+      - action: action_get_horoscope  # Fetches and provides horoscope
+
+  - story: User denies after being asked for zodiac sign
+    steps:
+      - intent: get_horoscope  # User asks for their horoscope
+      - action: utter_ask_zodiac_sign  # Bot asks for their zodiac sign
+      - intent: deny  # User denies to provide the zodiac sign
+      - action: utter_goodbye  # Bot ends the conversation politely

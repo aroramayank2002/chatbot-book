@@ -1,0 +1,115 @@
+#  define the **Natural Language Understanding (NLU)** training data for the bot
+version: "3.0"
+nlu:
+  - intent: get_horoscope
+    examples: |
+      - What's my horoscope?
+      - Can you tell me my horoscope?
+      - I need my horoscope
+      - Please tell me the horoscope
+      - What is my fortune today?
+      - Give me my daily horoscope
+      - Tell me today's horoscope
+      - Horoscope for today please
+      - What's my fortune?
+      - Show me the horoscope
+      - What's my horoscope for [today](time)?
+      - Tell me my horoscope for [tomorrow](time).
+      - Can you tell me my horoscope for [next week](time)?
+
+
+  - intent: inform_zodiac
+    examples: |
+      - My zodiac sign is [Aries](zodiac_sign)
+      - I am a [Leo](zodiac_sign)
+      - It's [Cancer](zodiac_sign)
+      - I am [Gemini](zodiac_sign)
+      - I am a [Virgo](zodiac_sign)
+      - I belong to [Taurus](zodiac_sign)
+      - My sign is [Libra](zodiac_sign)
+      - [Capricorn](zodiac_sign)
+      - It's [Aquarius](zodiac_sign)
+      - That's [Pisces](zodiac_sign)
+      - [Sagittarius](zodiac_sign)
+      - My zodiac sign is [Scorpio](zodiac_sign)
+
+  - intent: affirm
+    examples: |
+      - Yes
+      - Yes, please
+      - Sure
+      - Absolutely
+
+  - intent: deny
+    examples: |
+      - No
+      - No thanks
+      - Not really
+      - Maybe later
+
+  - intent: greeting
+    examples: |
+      - Hello there!
+      - Hi!
+      - Good morning!
+      - Hi my name is [Mayank](name)
+
+  - intent: subscription
+    examples: |
+      - I want to subscribe to your service.
+      - How can I subscribe?
+      - Sign me up for the newsletter.
+
+  - intent: dob_intent
+    examples: |
+      - [19](DD)-[01](MM)
+      - my DOB is 13th June
+      - I was born on 13-06
+      - my birth date is June 13
+      - 13-06 is my date of birth
+      - I was born in June
+      - My DOB is [13](DD)-[06](MM)
+      - I was born on [15](DD)/[07](MM)
+      - My date of birth is [22](DD)-[11](MM)
+      - [06](MM)/[25](DD) is my birthday
+
+  - intent: buy_pizza
+    examples: |
+      - I want to buy a pizza
+      - Can I order a pizza?
+      - I'd like to order pizza
+      - I want to order a pizza
+      - Can you get me a pizza?
+      - I need pizza
+      - Give me a pizza
+      - Pizza delivery please
+      - I'd like to order a large pizza
+      - Order a pizza for me
+
+  - intent: inform
+    examples: |
+      - I want a [large](pizza_size) pizza
+      - Can you get me a [medium](pizza_size) [pepperoni](pizza_type) pizza?
+      - I'd like a [small](pizza_size) [cheese](pizza_type) pizza
+      - I need a [large](pizza_size) [vegetarian](pizza_type) pizza
+      - Order a [medium](pizza_size) [margarita](pizza_type) pizza for me
+      - Get me a [small](pizza_size) [BBQ chicken](pizza_type) pizza
+      - Deliver a [large](pizza_size) [meat feast](pizza_type) pizza
+      - I'd like [medium](pizza_size) pizza with [extra cheese](pizza_type)
+      - I want a [large](pizza_size) pizza with [veggies](pizza_type)
+      - Can I get a [small](pizza_size) [Hawaiian](pizza_type) pizza?
+
+  - lookup: zodiac_sign
+    examples: |
+      - Aries
+      - Taurus
+      - Gemini
+      - Cancer
+      - Leo
+      - Virgo
+      - Libra
+      - Scorpio
+      - Sagittarius
+      - Capricorn
+      - Aquarius
+      - Pisces

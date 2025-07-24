@@ -1,0 +1,90 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "text": "Hello there!",
+        "intent": "greeting",
+        "entities": []
+      },
+      {
+        "text": "Hi!",
+        "intent": "greeting",
+        "entities": []
+      },
+      {
+        "text": "Good morning!",
+        "intent": "greeting",
+        "entities": []
+      },
+      {
+        "text": "What's my horoscope for today?",
+        "intent": "get_horoscope",
+        "entities": [
+          {
+            "start": 6,
+            "end": 15,
+            "value": "today",
+            "entity": "time"
+          }
+        ]
+      },
+      {
+        "text": "Tell me my horoscope for tomorrow.",
+        "intent": "get_horoscope",
+        "entities": [
+          {
+            "start": 26,
+            "end": 34,
+            "value": "tomorrow",
+            "entity": "time"
+          }
+        ]
+      },
+      {
+        "text": "Can you tell me my horoscope for next week?",
+        "intent": "get_horoscope",
+        "entities": [
+          {
+            "start": 32,
+            "end": 41,
+            "value": "next week",
+            "entity": "time"
+          }
+        ]
+      },
+      {
+        "text": "I want to subscribe to your service.",
+        "intent": "subscription",
+        "entities": []
+      },
+      {
+        "text": "How can I subscribe?",
+        "intent": "subscription",
+        "entities": []
+      },
+      {
+        "text": "Sign me up for the newsletter.",
+        "intent": "subscription",
+        "entities": []
+      },
+      {
+        "text": "19-01",
+        "intent": "dob_intent",
+        "entities": [
+          {
+            "start": 0,
+            "end": 2,
+            "value": "19",
+            "entity": "DD"
+          },
+          {
+            "start": 3,
+            "end": 5,
+            "value": "01",
+            "entity": "MM"
+          }
+        ]
+      }
+    ]
+  }
+}

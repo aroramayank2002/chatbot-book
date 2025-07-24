@@ -1,0 +1,41 @@
+version: "3.1"
+nlu:
+- intent: get_recipe
+  examples: |
+    - [3 tablespoons](qty) [oil](medium) or [ghee](medium)
+    - ½ teaspoon [cumin seeds](spice)
+    - ¼ [teaspoon](qty) [turmeric](spice) powder ([ground turmeric](spice))
+    - ½ teaspoon [Kashmiri Chilli Powder ](spice)or ¼ to ½ teaspoon [red chilli powder](spice) or [cayenne pepper ](spice)or [paprika](spice)
+    - ¼ teaspoon [Garam Masala](spice) or [Punjabi garam masala](spice) powder
+    - 1 [tablespoon](spice) [heavy cream](food) or 1 tablespoon [malai](spice) ([clotted cream](spice)) or 2 tablespoons of [light cream](spice), optional
+    - [1 cup](qty) [green peas](food) ([matar](food)) – fresh or frozen, [130 grams](qty)
+    - [1 to 1.25 cups](qty) [water](qty) for stove-top pressure cooker and 1 cup water for Instant Pot
+    - [salt](spice) as required
+    - ½ teaspoon [sugar](spice) or add as required – optional *check notes
+    - [250 to 300 grams](qty) [Paneer](food) ([Indian cottage cheese](food))
+    - [½ teaspoon](qty) [kasuri methi](spice) – crushed, ([dry fenugreek leaves](spice))
+    - [1 to 2 tablespoons](qty) [chopped coriander leaves](spice) ([cilantro](spice))
+    - [¾ to 1 cup](qty) [chopped tomatoes](food) – [120 grams](qty) or [3 medium-sized](qty)
+    - [½ cup](qty) [chopped onions](food) – [60 grams](qty) or [1 medium-sized](qty)
+    - [1 teaspoon](qty) [chopped green chilies](spice) or [serrano peppers](spice) or [1 to 2](qty) [green chillies](spice)
+    - [1 teaspoon](qty) [chopped garlic](spice) or [3 to 4](qty) [medium-sized](qty) [garlic cloves](spice)
+    - [2 tablespoons](qty) [chopped coriander leaves](spice)
+    - [10 to 12](qty) [cashews](food)
+    - [4 to 5](qty) [black peppercorns](spice)
+    - 2 cloves
+    - 1 inch [cinnamon](spice) (true cinnamon) or [½ inch](qty) [cassia cinnamon](spice)
+    - 1 teaspoon [coriander seeds](spice)
+    - 1 teaspoon chopped green chilies or serrano peppers or 1 to 2 green chillies
+    - 1 teaspoon chopped ginger or 1 inch ginger
+    - 1 teaspoon chopped garlic or 3 to 4 medium-sized garlic cloves
+    - 2 tablespoons chopped coriander leaves
+    - 10 to 12 cashews
+    - 4 to 5 black peppercorns
+    - 1 inch cinnamon (true cinnamon) or ½ inch cassia cinnamon
+    - 1 green cardamom – optional
+    - 1 teaspoon coriander seeds
+    - Make the masala paste with tomatoes, spices, herbs and cashews as listed above.
+    - Press the sauté button of your Instant pot and let the display show “hot”. Add oil to the inner steel pot. Crackle the cumin seeds first.
+    - Add the ground masala paste and sauté stirring often until it thickens and looks glossy. You can press the sauté button twice to bring the setting to less, if in case the pot becomes too hot.
+    - Add the turmeric powder, red chilli powder and garam masala powder. Mix and sauté for a minute.
+    - Add the green peas, 1 cup of water, salt and combine thoroughly, deglazing if needed. Press the cancel button.

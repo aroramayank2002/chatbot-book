@@ -1,0 +1,31 @@
+1.
+
+# https://github.com/explosion/spaCy/discussions/10683
+
+# /opt/homebrew/bin/python3 -m venv .venv
+# source .venv/bin/activate
+# python -m pip install -U pip setuptools wheel
+# python -m pip install 'spacy[apple]' --no-cache-dir
+# python -m spacy download en_core_web_sm
+# python -m spacy download en_core_web_md
+
+
+# python3 -m pip install --upgrade pip
+
+#  on mac
+# pip install --upgrade pip setuptools wheel
+
+    pip install rasa\[full\]
+        or
+    pip install "rasa[full]"
+
+
+    Error: pg_config executable not found.
+        brew install postgresql
+        update .zshrc for postgress path
+        source ~/.zshrc
+
+        Then it's successful (had to run the same command twice as first execution failed):
+            pip install "rasa[full]"
+
+

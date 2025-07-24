@@ -1,0 +1,8 @@
+### post-message
+# rasa run --enable-api
+POST http://localhost:5005/model/parse
+Content-Type: application/json
+
+{
+  "text": "hi there"
+}
