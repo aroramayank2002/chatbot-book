@@ -3,8 +3,8 @@ digraph  {
 "-1" [class=end, fillcolor=red, fontsize=12, label=END, style=filled];
 1 [class=active, fontsize=12, label=action_session_start];
 2 [class=active, fontsize=12, label=action_list_entities];
-3 [class=active, fontsize=12, label=action_pair_food_spice_with_qty];
-4 [class=active, fontsize=12, label=action_pair_food_spice_type_with_qty];
+3 [class=active, fontsize=12, label=action_pair_food_spice_type_with_qty];
+4 [class=active, fontsize=12, label=action_group_foods_spices];
 5 [class="intent dashed active", label="  ?  ", shape=rect];
 6 [class="intent active", fillcolor=lightblue, label="/inform", shape=rect, style=filled];
 0 -> "-1"  [class="", key=NONE, label=""];

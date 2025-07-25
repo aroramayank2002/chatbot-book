@@ -23,6 +23,7 @@ actions:
 - action_pair_food_spice_with_qty
 - action_pair_food_spice_type_with_qty
 - action_pair_food_spice_type_with_qty_handling_or
+- action_group_foods_spices
 
 responses:
   utter_greet:

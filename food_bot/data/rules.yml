@@ -18,6 +18,7 @@ rules:
     - action: action_list_entities
 #    - action: action_pair_food_spice_with_qty
     - action: action_pair_food_spice_type_with_qty
+    - action: action_group_foods_spices
 #    - action: action_pair_food_spice_type_with_qty_handling_or
 
 

@@ -4,4 +4,4 @@ nlu:
 
   - intent: inform
     examples: |
-      - [baking powder](food)
+      - [baking powder](spice)
