@@ -100,18 +100,18 @@ nlu:
   - intent: inform
     examples: |
       - I used [2](qty) [potatoes](food), [1 teaspoon](qty) of [cumin](spice), and [1/2 tsp](qty) of [turmeric](spice).
-      - [2 large](qty) [potatoes](food) [aloo](food), such as Russet, peeled and cut into bite-sized chunks
-      - [1 medium](qty) [cauliflower gobi](food), cut into small florets
-      - [2 tablespoons](qty) vegetable oil
+      - [2 large](qty) [potatoes](food) [aloo](food), such as Russet, [peeled and cut into bite-sized chunks](type)
+      - [1 medium](qty) [cauliflower gobi](food), [cut into small florets](type)
+      - [2 tablespoons](qty) [vegetable oil](medium)
       - [1 teaspoon](qty) [cumin seeds](spice)
-      - [1 medium](qty) [onion](food) finely chopped
-      - [2](qty) cloves [garlic](spice) minced
+      - [1 medium](qty) [onion](food) [finely chopped](type)
+      - [2](qty) cloves [garlic](spice) [minced](type)
       - [1- inch](qty) piece of [ginger grated](spice)
       - [1 large](qty) [tomato diced](food)
       - 1 teaspoon [turmeric powder](spice)
       - [1 teaspoon](qty) [ground cumin](spice)
       - 1 teaspoon [ground [coriander](spice)
-      - [½ teaspoon](qty) [red chili](spice) powder adjust to taste
+      - [½ teaspoon](qty) [red chili](spice) [powder](type) adjust to taste
       - [Salt](spice) to taste
       - [½ cup](qty) water
       - [3 tablespoons](qty) [oil](medium) or [ghee](medium)
@@ -120,18 +120,18 @@ nlu:
       - ½ teaspoon [Kashmiri Chilli Powder ](spice)or ¼ to ½ teaspoon [red chilli powder](spice) or [cayenne pepper ](spice)or [paprika](spice)
       - ¼ teaspoon [Garam Masala](spice) or [Punjabi garam masala](spice) powder
       - 1 [tablespoon](spice) [heavy cream](food) or 1 tablespoon [malai](spice) [clotted cream](spice) or 2 tablespoons of [light cream](spice), optional
-      - [1 cup](qty) [green peas](food) [matar](food) – fresh or frozen, [130 grams](qty)
+      - [1 cup](qty) [green peas](food) [matar](food) – [fresh or frozen](type), [130 grams](qty)
       - [1 to 1.25 cups](qty) [water](qty) for stove-top pressure cooker and 1 cup water for Instant Pot
       - [salt](spice) as required
       - ½ teaspoon [sugar](spice) or add as required – optional *check notes
       - [250 to 300 grams](qty) [Paneer](food) [Indian cottage cheese](food)
       - [½ teaspoon](qty) [kasuri methi](spice) – crushed, [dry fenugreek leaves](spice)
-      - [1 to 2 tablespoons](qty) [chopped coriander leaves](spice) [cilantro](spice)
-      - [¾ to 1 cup](qty) [chopped tomatoes](food) – [120 grams](qty) or [3 medium-sized](qty)
-      - [½ cup](qty) [chopped onions](food) – [60 grams](qty) or [1 medium-sized](qty)
-      - [1 teaspoon](qty) [chopped green chilies](spice) or [serrano peppers](spice) or [1 to 2](qty) [green chillies](spice)
-      - [1 teaspoon](qty) [chopped garlic](spice) or [3 to 4](qty) [medium-sized](qty) [garlic cloves](spice)
-      - [2 tablespoons](qty) [chopped coriander leaves](spice)
+      - [1 to 2 tablespoons](qty) [chopped](type) [coriander leaves](spice) [cilantro](spice)
+      - [¾ to 1 cup](qty) [chopped](type) [tomatoes](food) – [120 grams](qty) or [3 medium-sized](qty)
+      - [½ cup](qty) [chopped](type) [onions](food) – [60 grams](qty) or [1 medium-sized](qty)
+      - [1 teaspoon](qty) [chopped](type) [green chilies](spice) or [serrano peppers](spice) or [1 to 2](qty) [green chillies](spice)
+      - [1 teaspoon](qty) [chopped](type) [garlic](spice) or [3 to 4](qty) [medium-sized](qty) [garlic cloves](spice)
+      - [2 tablespoons](qty) [chopped](type) [coriander leaves](spice)
       - [10 to 12](qty) [cashews](food)
       - [4 to 5](qty) [black peppercorns](spice)
       - 2 cloves

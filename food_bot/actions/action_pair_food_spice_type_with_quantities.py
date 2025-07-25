@@ -49,13 +49,16 @@ class ActionPairFoodSpiceTypeWithQty(Action):
         quantities = sorted(quantities, key=lambda x: x["start"])
         types = sorted(types, key=lambda x: x["start"])
 
-        # Pair items with their quantities and types
+        # Pair items with quantities, and optionally with type
         pairs = []
-        for item, qty, t in zip(all_items, quantities, types):
+        for i, item in enumerate(all_items):
+            qty_val = quantities[i]["qty"] if i < len(quantities) else None
+            type_val = types[i]["type_label"] if i < len(types) else None
+
             pairs.append({
                 "item": item["item"],
-                "quantity": qty["qty"],
-                "type": t["type_label"]
+                "quantity": qty_val,
+                "type": type_val
             })
 
         # Log the computed pairs
@@ -64,19 +67,16 @@ class ActionPairFoodSpiceTypeWithQty(Action):
 
         # Create response with the pairs included
         if pairs:
-            response = "Here are the ingredient pairings with type I found:\n\n"
+            response = "Here are the ingredient pairings (note 'type' is optional):\n\n"
             for pair in pairs:
-                response += (
-                    f"- {pair['item']}: {pair['quantity']} "
-                    f"(type: {pair['type']})\n"
-                )
+                quantity_str = pair['quantity'] if pair['quantity'] else "No quantity"
+                type_str = pair['type'] if pair['type'] else "No type"
+                response += f"- {pair['item']}: {quantity_str} (type: {type_str})\n"
         else:
             response = (
                 "I couldn't find any valid pairings. "
-                "Please make sure to include foods/spices, their quantities, and types."
+                "Make sure you have foods/spices, their quantities, and optionally a type."
             )
 
-        # Send the response back to the user
         dispatcher.utter_message(text=response)
-
         return []

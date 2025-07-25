@@ -17,7 +17,8 @@ class ActionListEntities(Action):
         food_entities = list(set([e["value"] for e in tracker.latest_message["entities"] if e["entity"] == "food"]))
         spice_entities = list(set([e["value"] for e in tracker.latest_message["entities"] if e["entity"] == "spice"]))
         qty_entities = list(set([e["value"] for e in tracker.latest_message["entities"] if e["entity"] == "qty"]))
-        qty_medium = list(set([e["value"] for e in tracker.latest_message["entities"] if e["entity"] == "medium"]))
+        medium_entities = list(set([e["value"] for e in tracker.latest_message["entities"] if e["entity"] == "medium"]))
+        type_entities = list(set([e["value"] for e in tracker.latest_message["entities"] if e["entity"] == "type"]))
 
         # Compile the response message
         response = "Here are the details I extracted:\n"
@@ -28,8 +29,10 @@ class ActionListEntities(Action):
             response += f"- Foods: {', '.join(food_entities)}\n"
         if spice_entities:
             response += f"- Spices: {', '.join(spice_entities)}\n"
-        if qty_medium:
-            response += f"- Medium: {', '.join(spice_entities)}\n"
+        if medium_entities:
+            response += f"- Medium: {', '.join(medium_entities)}\n"
+        if type_entities:
+            response += f"- Type: {', '.join(type_entities)}\n"
 
         if not qty_entities and not food_entities and not spice_entities:
             response += "I couldn't find any information related to food, spices, quantities or medium."

@@ -27,16 +27,19 @@ class ActionPairFoodSpiceWithQty(Action):
         food_entities = [e for e in entities if e.get("entity") == "food"]
         spice_entities = [e for e in entities if e.get("entity") == "spice"]
         qty_entities = [e for e in entities if e.get("entity") == "qty"]
+        medium_entities = [e for e in entities if e.get("entity") == "medium"]
 
         # Optionally log specific entity groups
         logger.info(f"Food entities: {food_entities}")
         logger.info(f"Spice entities: {spice_entities}")
         logger.info(f"Quantity entities: {qty_entities}")
+        logger.info(f"Medium entities: {medium_entities}")
 
         # Convert entities into readable pairs
         foods = [{"item": e.get("value"), "start": e.get("start")} for e in food_entities]
         spices = [{"item": e.get("value"), "start": e.get("start")} for e in spice_entities]
         quantities = [{"qty": e.get("value"), "start": e.get("start")} for e in qty_entities]
+        mediums = [{"medium": e.get("value"), "start": e.get("start")} for e in medium_entities]
 
         # Sort entities by their position in the input to pair correctly
         all_items = sorted(foods + spices, key=lambda x: x["start"])
@@ -57,7 +60,7 @@ class ActionPairFoodSpiceWithQty(Action):
             for pair in pairs:
                 response += f"- {pair['item']}: {pair['quantity']}\n"
         else:
-            response = "I couldn't find any valid pairings. Please make sure to include foods, spices, and their quantities."
+            response = "I couldn't find any valid food+qty pairings. Please make sure to include foods, spices, and their quantities."
 
         # Send the response back to the user
         dispatcher.utter_message(text=response)

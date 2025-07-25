@@ -12,9 +12,12 @@ rules:
   - intent: bot_challenge
   - action: utter_iamabot
 
-- rule: extract food, spice and qty
+- rule: extract food, spice, qty and medium
   steps:
     - intent: inform
     - action: action_list_entities
-    - action: action_pair_food_spice_with_qty
+#    - action: action_pair_food_spice_with_qty
+    - action: action_pair_food_spice_type_with_qty
+#    - action: action_pair_food_spice_type_with_qty_handling_or
+
 

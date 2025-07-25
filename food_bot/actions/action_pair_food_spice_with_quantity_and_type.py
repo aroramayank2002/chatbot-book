@@ -24,7 +24,7 @@ def split_on_or(value: str) -> List[str]:
 
 class ActionPairFoodSpiceTypeWithQty(Action):
     def name(self) -> Text:
-        return "action_pair_food_spice_type_with_qty"
+        return "action_pair_food_spice_type_with_qty_handling_or"
 
     def run(
             self,

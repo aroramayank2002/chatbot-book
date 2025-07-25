@@ -15,10 +15,14 @@ entities:
 - food
 - recipe_name
 - medium
+- type
+
 actions:
 - action_list_entities
 - action_fetch_recipe
 - action_pair_food_spice_with_qty
+- action_pair_food_spice_type_with_qty
+- action_pair_food_spice_type_with_qty_handling_or
 
 responses:
   utter_greet:
