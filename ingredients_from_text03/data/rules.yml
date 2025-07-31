@@ -1,0 +1,7 @@
+version: "3.1"
+
+rules:
+  - rule: Ask next ingredient
+    steps:
+      - intent: inform_food
+      - action: action_hello_world

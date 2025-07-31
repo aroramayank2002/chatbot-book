@@ -1,0 +1,25 @@
+version: "3.1"
+
+intents:
+  - greet
+  - inform_food
+
+actions:
+  - action_hello_world
+
+entities:
+  - food_item
+
+slots:
+  food_item:
+    type: text
+    mappings: []
+
+responses:
+  utter_found_food_items:
+    - text: "Extracted food items: {food_item}"
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

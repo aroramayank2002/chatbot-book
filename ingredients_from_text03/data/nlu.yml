@@ -1,0 +1,23 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+
+#- lookup: food_item
+#  examples: |
+#    - oil
+#    - data/food_items.txt
+#    - cumin seeds
+#    - onion
+#    - lemon
+#    - sugar
+#    - fenugreek
+
+- intent: inform_food
+  examples: |
+    - I need some [cumin seeds](food_item) and [fenugreek](food_item)
+    - The list has [onion](food_item), [tomato](food_item), and [oil](food_item)
+    - Please add [sugar](food_item) to that

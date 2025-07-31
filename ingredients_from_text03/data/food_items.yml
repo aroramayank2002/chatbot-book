@@ -1,0 +1,165 @@
+version: "3.1"
+
+nlu:
+  - lookup: food_item
+    examples: |
+      - oil
+      - White Peas
+      - Onion
+      - Tomato
+      - Ginger Garlic Paste
+      - Jeera Powder
+      - Dhania Powder
+      - Haldi Powder
+      - Salt
+      - Cumin Seeds
+      - Oil
+      - Potatoes
+      - Green Chillies
+      - Roasted Jeera Powder
+      - Red Chilly Powder
+      - Amchoor Powder
+      - Cornflour
+      - potato
+      - oil
+      - turmeric
+      - green chilli
+      - curry leaves
+      - mustard seeds
+      - salt
+      - pineapple
+      - sugar
+      - haldi
+      - oil
+      - red chilly powder
+      - flour
+      - jeera
+      - saunf
+      - rai
+      - methi seeds
+      - onion seeds
+      - salt
+      - yogurt
+      - water
+      - green chillies
+      - fresh coriander leaves
+      - ginger
+      - curry leaves
+      - salt
+      - cumin seeds
+      - asafoetida powder
+      - crushed ice
+      - cucumbers
+      - yogurt
+      - ginger
+      - green chillies
+      - coconut
+      - salt
+      - oil
+      - mustard seeds
+      - curry leaves
+      - red chillies
+      - milk
+      - lemon
+      - sugar
+      - condensed milk
+      - saffron
+      - cardamom powder
+      - pistachios
+      - gulab jal
+      - wheat flour
+      - salt
+      - black pepper
+      - oil
+      - waterwheat flour
+      - onions
+      - green chillies
+      - cumin seeds
+      - salt
+      - mint
+      - coriander leaves
+      - red chilli powder
+      - desi ghee
+      - watermasoor dal / yellow moong dal
+      - tomato
+      - jeera
+      - turmeric
+      - green chilli
+      - oil
+      - salt
+      - garlicchick peas
+      - potatoes
+      - roasted cumin powder
+      - chaat masala
+      - onion
+      - ginger
+      - tomato
+      - green chillies
+      - red chilli powder
+      - coriander leaves
+      - oil
+      - lemon
+      - salt
+      - fenugreek
+      - green peas
+      - onion
+      - ginger garlic paste
+      - green chili paste
+      - oil
+      - tomato
+      - cumin seed
+      - dry mango powder
+      - cashewnuts
+      - fresh cream
+      - white pepper
+      - milk
+      - salt
+      - urad dal
+      - sugar
+      - water
+      - saffron colour
+      - cardamom
+      - ghee
+      - maida
+      - ghee / oil
+      - baking soda
+      - oil
+      - pomegranate
+      - coconut water
+      - dates
+      - almonds
+      - paneer
+      - banana
+      - apple
+      - milk
+      - saffron
+      - ghee
+      - paratha
+      - stuffed paratha
+      - leafy vegetable
+      - tea
+      - paneer sabji
+      - lemon
+      - water
+      - milk pheni
+      - mithai
+      - walnuts
+      - nimbu paani
+      - jeera ajwain water
+      - coriander
+      - amla
+      - green chillies
+      - ginger
+      - salt
+      - rice
+      - water
+      - carrot
+      - potato
+      - peas
+      - onion
+      - black cardamoms
+      - red chilli powder
+      - cinnamon
+      - cloves
+      - oil
+      - salt
