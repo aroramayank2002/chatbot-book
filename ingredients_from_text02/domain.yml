@@ -20,6 +20,11 @@ slots:
     influence_conversation: false
     mappings: [ ]
 
+  current_ingredient:
+    type: text
+    influence_conversation: false
+    mappings: [ ]
+
 actions:
   - action_hello_world
   - action_ask_ingredients

@@ -38,21 +38,61 @@ class ActionCollectQuantities(Action):
     def name(self) -> Text:
         return "action_collect_quantities"
 
+    # In this one you have to type complete response '5 cups rice'
+    # def run(self, dispatcher: CollectingDispatcher,
+    #         tracker: Tracker,
+    #         domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+    #     logger.info(f"action_collect_quantities")
+    #
+    #     ingredients = tracker.get_slot("ingredients")
+    #     quantities = tracker.get_slot("quantities") or {}
+    #
+    #     logger.info(f"ingredients: {ingredients}")
+    #     logger.info(f"quantities: {quantities}")
+    #
+    #     # Try to extract latest input (user just gave a quantity)
+    #     latest_entities = tracker.latest_message.get("entities", [])
+    #     latest_ingredient = None
+    #     latest_quantity = None
+    #
+    #     for ent in latest_entities:
+    #         if ent.get("entity") == "ingredient":
+    #             latest_ingredient = ent.get("value")
+    #         elif ent.get("entity") == "quantity":
+    #             latest_quantity = ent.get("value")
+    #
+    #     # If user just gave a valid pair, store it
+    #     if latest_ingredient and latest_quantity:
+    #         quantities[latest_ingredient] = latest_quantity
+    #
+    #     # Find next ingredient that hasn't been filled yet
+    #     for ingredient in ingredients:
+    #         if ingredient not in quantities:
+    #             # Ask user for quantity of the next ingredient
+    #             dispatcher.utter_message(text=f"How much {ingredient} do you need?")
+    #             return [SlotSet("quantities", quantities)]
+    #
+    #     # All ingredients collected → show summary
+    #     return [SlotSet("quantities", quantities),
+    #             FollowupAction("action_show_summary")]
+
+    # In this one you can say only quantity '5 cups'
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+            domain: Dict[Text, Any]) -> List:
         logger.info(f"action_collect_quantities")
 
-        ingredients = tracker.get_slot("ingredients")
+        ingredients = tracker.get_slot("ingredients") or []
         quantities = tracker.get_slot("quantities") or {}
-
+        current_ingredient = tracker.get_slot("current_ingredient")
         logger.info(f"ingredients: {ingredients}")
         logger.info(f"quantities: {quantities}")
+        logger.info(f"current_ingredient: {current_ingredient}")
 
-        # Try to extract latest input (user just gave a quantity)
         latest_entities = tracker.latest_message.get("entities", [])
         latest_ingredient = None
         latest_quantity = None
+        logger.info(f"latest_entities: {latest_entities}")
 
         for ent in latest_entities:
             if ent.get("entity") == "ingredient":
@@ -60,22 +100,35 @@ class ActionCollectQuantities(Action):
             elif ent.get("entity") == "quantity":
                 latest_quantity = ent.get("value")
 
-        # If user just gave a valid pair, store it
-        if latest_ingredient and latest_quantity:
+        # CASE 1: User only gave quantity (e.g., "2 cups")
+        if latest_quantity and not latest_ingredient and current_ingredient:
+            quantities[current_ingredient] = latest_quantity
+
+        # CASE 2: User gave both ingredient and quantity
+        elif latest_ingredient and latest_quantity:
             quantities[latest_ingredient] = latest_quantity
 
-        # Find next ingredient that hasn't been filled yet
+        # # CASE 3: User gave incomplete or invalid input
+        # elif latest_quantity is None:
+        #     dispatcher.utter_message(text="Sorry, I didn't understand the quantity.")
+        #     return []
+
+        # Ask next ingredient
         for ingredient in ingredients:
             if ingredient not in quantities:
-                # Ask user for quantity of the next ingredient
                 dispatcher.utter_message(text=f"How much {ingredient} do you need?")
-                return [SlotSet("quantities", quantities)]
+                return [
+                    SlotSet("quantities", quantities),
+                    SlotSet("current_ingredient", ingredient)
+                ]
 
-        # All ingredients collected → show summary
+        dispatcher.utter_message(text="All ingredients received. Type 'summary' to see them.")
+        # return [
+        #     SlotSet("quantities", quantities),
+        #     SlotSet("current_ingredient", None)
+        # ]
         return [SlotSet("quantities", quantities),
-                FollowupAction("action_show_summary")]
-        # dispatcher.utter_message(text="All ingredients received. Type 'summary' to see them.")
-        # return [SlotSet("quantities", quantities)]
+            FollowupAction("action_show_summary")]
 
 
 class ActionShowSummary(Action):
