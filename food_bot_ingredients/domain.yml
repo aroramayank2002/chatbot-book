@@ -1,0 +1,108 @@
+version: '3.1'
+
+entities:
+  - ingredient
+  - quantity
+
+intents:
+  - provide_recipe
+  - inform_quantity
+  - provide_quantity
+  - greet
+
+responses:
+  utter_greet:
+    - text: Hey! How are you?
+  utter_cheer_up:
+    - text: 'Here is something to cheer you up:'
+      image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+    - text: Did that help you?
+  utter_happy:
+    - text: Great, carry on!
+  utter_goodbye:
+    - text: Bye
+  utter_iamabot:
+    - text: I am a bot, powered by Rasa.
+  utter_all_ingredients_set:
+    - text: "All ingredients are set!"
+  utter_ask_quantity_missing:
+    - text: "How many {ingredient_in_question} do you need?"
+  utter_ask_ingredient_in_question:
+    - text: "Which ingredient are we looking at now?"
+  utter_ask_ingredient_quantity:
+    - text: "How many {ingredient_in_question} do you need?"
+  utter_ask_ingredients:
+    - text: "Which ingredients would you like to use?"
+  utter_ask_ingredients_map:
+    - text: "Which ingredients are you using? (e.g., carrots, celery)"
+  utter_slots_summary:
+    - text: >
+        Great, here's what we have so far:
+        - Ingredient: {ingredient_in_question}
+        - Quantity: {ingredient_quantity}
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+#slots:
+#  ingredients_map:
+#    type: any   # store a dictionary of ingredient -> quantity
+#    initial_value: {}
+#
+#  ingredient_in_question:
+#    type: text
+
+slots:
+  ingredients_map:
+    type: any
+    influence_conversation: false
+    mappings: []
+    initial_value: {}
+
+  ingredient_in_question:
+    type: text
+    mappings: []
+    influence_conversation: false
+
+  ingredients_list:
+    type: any
+    influence_conversation: false
+    mappings: []
+
+  ingredient_quantity:
+    type: float
+    influence_conversation: false
+    mappings: []
+
+forms:
+#  recipe_form:
+#    required_slots:
+#      - ingredient_in_question
+#      - ingredient_quantity
+  multi_ingredients_form:
+    required_slots:
+      - ingredients_map
+      - ingredient_quantity
+
+
+
+
+
+actions:
+  - utter_happy
+  - action_update_ingredients
+  - action_ask_for_ingredient_quantity
+  - action_print_ingredients
+  - validate_recipe_form
+  - action_submit_recipe_form
+  - validate_multi_ingredients_form
+  - action_submit_multi_ingredients_form
+  - action_process_ingredients
+
+
+
+
+

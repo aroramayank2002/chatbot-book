@@ -1,0 +1,58 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Ask for missing ingredient quantity
+  steps:
+    - intent: request_ingredient_quantity
+    - action: action_ask_for_ingredient_quantity
+
+
+- rule: Ask for ingredient quantities
+  steps:
+    - intent: provide_recipe
+    - action: action_process_ingredients
+    - action: multi_ingredients_form
+    - active_loop: multi_ingredients_form
+
+
+#- rule: Handle recipe
+#  steps:
+#    - intent: provide_recipe
+#    - action: action_update_ingredients
+#    - action: action_ask_for_ingredient_quantity
+#    - action: recipe_form
+#    - action: action_submit_recipe_form
+#    - active_loop: null
+
+#- rule: Handle quantity
+#  steps:
+#    - intent: inform_quantity
+#    - action: action_ask_for_ingredient_quantity
+#    - action: action_print_ingredients
+#
+#
+#- rule: Activate recipe form
+#  steps:
+#    - intent: request_recipe
+#    - action: utter_ask_ingredients  # e.g., "What ingredients are you using?"
+#    - action: recipe_form
+#    - active_loop: recipe_form
+
+#- story: start recipe form
+#  steps:
+#    - intent: provide_recipe
+#    - action: recipe_form
+#    - active_loop: recipe_form
+#    - action: action_submit_recipe_form
+#    - active_loop: null

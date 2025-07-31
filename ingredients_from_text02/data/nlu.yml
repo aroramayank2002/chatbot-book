@@ -1,0 +1,19 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+
+- intent: start_recipe
+  examples: |
+    - Let's start the recipe
+    - I'm ready to cook
+    - Start
+
+- intent: give_quantity
+  examples: |
+    - [2 cups](quantity) of [rice](ingredient)
+    - [3](quantity) [eggs](ingredient)
+    - [1 tablespoon](quantity) [olive oil](ingredient)

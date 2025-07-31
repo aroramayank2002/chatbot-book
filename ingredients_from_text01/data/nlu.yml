@@ -1,0 +1,18 @@
+version: "3.1"
+
+nlu:
+  - intent: describe_recipe
+    examples: |
+      - Add [onion](food), [cumin](spice).
+
+  - intent: provide_food
+    examples: |
+      - I want [carrots](food) and [tomatoes](food)
+      - Add some [onions](food) please
+      - I'd like [garlic](food) and [cilantro](food)
+
+  - intent: quantity
+    examples: |
+      - [1/2 kg](quantity)
+      - [5](quantity) 
+      - [7](quantity)

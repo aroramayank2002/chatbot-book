@@ -1,0 +1,39 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: provide_recipe
+  examples: |
+    - I'm making a soup with carrots, celery, and onions.[]{"entity": "ingredient", "value": "carrots"}[]{"entity": "ingredient", "value": "celery"}[]{"entity": "ingredient", "value": "onions"}
+
+- intent: provide_recipe
+  examples: |
+    - I'm making a soup with [carrots](ingredient), [celery](ingredient), and [onions](ingredient).
+    - Let's cook tomato sauce with [tomatoes](ingredient), [onions](ingredient), and [garlic](ingredient).
+
+- intent: inform_quantity
+  examples: |
+    - I need [3](quantity)
+    - [five](quantity) of them
+    - about [2](quantity)
+  # nlu.yml snippet
+- intent: provide_quantity
+  examples: |
+    - [5](quantity)
+    - [three](quantity)
+    - let's use [4](quantity)
+    - how about [2](quantity)

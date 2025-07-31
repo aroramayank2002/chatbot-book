@@ -1,0 +1,35 @@
+version: "3.1"
+
+intents:
+  - greet
+  - start_recipe
+  - give_quantity
+
+entities:
+  - ingredient
+  - quantity
+
+slots:
+  ingredients:
+    type: list
+    influence_conversation: false
+    mappings: [ ]
+
+  quantities:
+    type: any
+    influence_conversation: false
+    mappings: [ ]
+
+actions:
+  - action_hello_world
+  - action_ask_ingredients
+  - action_collect_quantities
+  - action_show_summary
+
+responses:
+  utter_ask_quantity:
+    - text: "How much {ingredient} do you need?"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

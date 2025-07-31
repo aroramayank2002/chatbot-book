@@ -1,0 +1,61 @@
+version: "3.1"
+
+intents:
+  - describe_recipe
+  - provide_food
+  - provide_quantity
+
+
+
+actions:
+  - list_ingredients
+  - validate_food_form
+  - action_ask_for_next_ingredient
+  - action_store_quantity
+
+entities:
+  - food
+  - spice
+  - quantity
+
+
+slots:
+  ingredients_map:
+    type: any
+    initial_value: {}
+    influence_conversation: false
+    mappings: []
+
+  needed_ingredients:
+    type: list
+    # Carrots and tomatoes live HERE instead of in code
+    initial_value: [ "carrots", "tomatoes" ]
+    influence_conversation: false
+    mappings: [ ]
+
+  requested_ingredient:
+    type: text
+    influence_conversation: false
+    mappings: [ ]
+
+
+responses:
+  utter_greet:
+    - text: "Hey! How are you?"
+
+  utter_ask_ingredient:
+    - text: "How many {ingredient} do you want?"
+
+  utter_confirm_ingredient:
+    - text: "Got it! {quantity} {ingredient}."
+
+  utter_already_filled:
+    - text: "We have all the needed ingredients filled."
+
+  utter_missed_quantity:
+    - text: "I didn't catch the number. Could you repeat?"
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

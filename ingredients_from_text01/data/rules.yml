@@ -1,0 +1,39 @@
+version: "3.1"
+
+rules:
+
+- rule: identify_ingredients
+  steps:
+  - intent: describe_recipe
+  - action: list_ingredients
+
+#- rule: Activate food_form
+#  steps:
+#    - intent: provide_food
+#    - action: food_form
+#    - active_loop: food_form
+#
+#- rule: Submit food_form
+#  condition:
+#    - active_loop: food_form
+#  steps:
+#    - action: food_form
+#    - active_loop: null
+#    - action: utter_done
+
+#- rule: Ask for next ingredient
+#  steps:
+#    - intent: provide_food
+#    - action: action_ask_for_next_ingredient
+
+- rule: Provide quantity
+  steps:
+    - intent: provide_food
+    - action: action_store_quantity
+    - action: action_ask_for_next_ingredient
+
+
+responses:
+  utter_done:
+    - text: "Thanks! Here’s what we got: {ingredients_map}"
+

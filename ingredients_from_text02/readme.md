@@ -1,13 +1,10 @@
--- not working as expected
+-- working as expected
 
 The project tries to extract ingredients (food, spices, oil) and their quantities from the
 huge text.
 
 Steps:
-1. Extract all ingredients
-2. Slot filling or form filling, ask for their quantities and fill form.
-
-
+Hardcoded ingredients without quantity, asks for quantity to fill the slots.
 
 -------- tech -----------
 cd /Users/mayankarora/dib/poc/chatbot-book/food_bot_ingredients
@@ -23,4 +20,4 @@ rasa shell --debug
 
 
 -------- test ------------
-I'm making a soup with carrots, celery, and onions.
+start
