@@ -5,3 +5,4 @@ nlu:
   - intent: inform
     examples: |
       - [baking powder](spice)
+      - [1 1/4 tsp](qty) [table salt](spice)
